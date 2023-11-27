@@ -7,14 +7,20 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <style>
     p {
-      text-align: left;
+      text-align:left;
+      align-items: left;
+      justify-content: space-between;
+      width: 80%;
+      margin-left: 20px;
+    text-orientation:left;
+    
+ 
     }
 
     p2 {
       text-align:left; 
     }
     
-
     body {
       font-family: 'Times New Roman', Times, serif;
       margin: 0;
@@ -110,7 +116,7 @@ nav a:hover {
 
     .ribbon {
       position: relative;
-      background-color: ;
+      background-color:rgb(28, 76, 138) ;
       color: white;
       text-align: center;
       padding: 5px;
@@ -135,9 +141,10 @@ nav a:hover {
       border-left-color: #333;
       left: -10px;
     }
-
     .footer {
-      display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(28, 76, 138);
   color: white;
   text-align: center;
@@ -145,10 +152,22 @@ nav a:hover {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 5%;
+  height: auto; 
+  z-index: 1;
+}
+
+.footer-content {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  text-align: left;
+  margin-right: 20px;
+}
+
+.search-container {
+  display: flex;
   align-items: center;
 }
 
@@ -200,25 +219,30 @@ nav a:hover {
 }
 
 .grid-item {
-  background-color: white;
+  background-color: rgb(233, 215, 210);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(39, 151, 226, 0.1);
-  border: 1px solid #ddd; 
-  text-align: center; 
-  height: 90%; 
+  border: 1px solid #ddd;
+  text-align: left; 
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+
+
 .grid-item h2 {
+ background-color: rgb(138, 161, 197);
+  text-align: center;
   color: rgb(28, 76, 138); 
   margin-bottom: 8px; 
 }
 
 .grid-item p {
   color: #333; 
+
 }
 
 .grid-item:hover {
@@ -227,28 +251,69 @@ nav a:hover {
 }
 
 
+.department-events {
+  background-color: rgb(28, 76, 138);
+  color: white;
+  width: 90%;
+  margin: 20px auto; 
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+
+.department-events h2 {
+  margin-bottom: 10px; 
+  
+}
+
+.department-events p {
+  margin-bottom: 20px; 
+  justify-content: space-between;
+}
+
+.department-events img {
+  width: 80%;
+  height: 500;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+  justify-content: center;
+}
+
+.text-box {
+  background-color: rgb(121, 206, 235); 
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+.text-box p {
+  margin-bottom: 20px;
+}
+
+
+
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
-    $(document).ready(function () {
-      $('.slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        autoplay: true, 
-        autoplaySpeed: 2000 
-      });
+    document.addEventListener('DOMContentLoaded', function () {
+      var footer = document.querySelector('.footer');
+  
+      function toggleFooter() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          footer.style.display = 'flex';
+        } else {
+          footer.style.display = 'none';
+        }
+      }
+  
+      
+      toggleFooter();
+  
+      
+      window.addEventListener('scroll', toggleFooter);
     });
-    window.addEventListener('scroll', function() {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        document.querySelector('.footer').style.display = 'block';
-    } else {
-        document.querySelector('.footer').style.display = 'none';
-    }
-});
   </script>
   <title> Department website</title>
 </head>
@@ -277,6 +342,7 @@ nav a:hover {
     <a href='people.html'>People</a>
     <a href='courses.html'>Courses</a>
     <a href='catalog.html'>Catalog</a>
+    <a href='news.html'>News</a>
     <div class="search-container">
       <input type="text" class="search-input" placeholder="Search...">
       <button class="search-button" onclick="searchFunction()">Search</button>
@@ -300,6 +366,28 @@ nav a:hover {
     </div>
   </div>
 
+
+  <div class="text-box">
+    <p>
+      <br> We believe everyone can be computer a scientists!
+    </p>
+    <p>
+      <br>
+    </p>
+    <p>With a degree in computer science, you can become the next big thing in our technologically advanced society.
+       Computer scientists have changed the world in which we live. You'll be equipped to develop the next big technological breakthrough 
+       with four areas of emphasis, a practical curriculum, a kind and approachable faculty, and lots of work and extracurricular 
+       possibilities. With its interactive robotics and visualisation lab, makerspace for creation and discovery, and hands-on networking and security lab, our new technology building will enable possibilities to investigate advanced computer themes.
+      </p>
+  
+    <p>
+      Our inclusive curriculum starts with the fundamentals of data structures and programming and ends with advanced computer science 
+      topics and a capstone project. The programme is also designed to meet you where you are in your computing journey, supporting both
+       students who have never used a computer before and those who have taken computer science courses before enrolling at University of
+        Ghana. Through conferences, hackathons, research opportunities, internships, and an extensive labour programme, computer science 
+        majors graduate with practical experience that equips them for success in the modern workforce.
+    </p>
+    </div>
   
   <div class="grid-container">
     <div class="grid-item">
@@ -315,49 +403,58 @@ nav a:hover {
     </div>
    
   </div>
-<p><br></p>
+  
 
-  <p1>
-    We believe everyone can be computer a scientists!
-  </p1>
-  <p>
-    <br>
-  </p>
-  <p>With a degree in computer science, you can become the next big thing in our technologically advanced society.
-     Computer scientists have changed the world in which we live. You'll be equipped to develop the next big technological breakthrough 
-     with four areas of emphasis, a practical curriculum, a kind and approachable faculty, and lots of work and extracurricular 
-     possibilities. With its interactive robotics and visualisation lab, makerspace for creation and discovery, and hands-on networking and security lab, our new technology building will enable possibilities to investigate advanced computer themes.
-    </p>
- 
-  <p>
-    Our inclusive curriculum starts with the fundamentals of data structures and programming and ends with advanced computer science 
-    topics and a capstone project. The programme is also designed to meet you where you are in your computing journey, supporting both
-     students who have never used a computer before and those who have taken computer science courses before enrolling at University of
-      Ghana. Through conferences, hackathons, research opportunities, internships, and an extensive labour programme, computer science 
-      majors graduate with practical experience that equips them for success in the modern workforce.
-  </p>
-  <div style="background-color: rgb(28, 76, 138); color: white; width: 80%; margin: 0 auto; padding: 20px; box-sizing: border-box;margin: 0%;">
+
+  
+  <div class="department-events">
     <h2>Department Events</h2>
     <p>Programmes, events, and seminars organized by department.</p>
-    <p><img src="evensss.jpg" height="300" alt="department event"/> </p>
+    <p><img src="cs-codesignal-main.jpg" height="500"  alt="department event"/> </p>
+    <p><img src="evensss.jpg" height="500"  alt="department event"/> </p>
+  
+  </div>
     
  </div>
  <p> <br></p>
  <p> <br></p>
  <p> <br></p>
  <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
  
  <footer class="footer">
-  &copy; 2023 Department of Computer Science, University of Ghana
   <div class="social-icons">
-     <a href="#" target="_blank"><img src="fbook.jpg" alt="Facebook"></a>
-     <a href="#" target="_blank"><img src="instagram.jpg" alt="Instagram"></a>
-     <p>Contact Us <br>
-      Phone & Email<br>
-      +233 501 382 035<br>
-      +233 559 145 698<br>
-      dcs@ug.edu.gh</p>
-  </footer>
+    <a href="#" target="_blank"><img src="fbook.jpg" alt="Facebook"></a>
+    <a href="#" target="_blank"><img src="instagram.jpg" alt="Instagram"></a>
+  </div>
+
+  <div class="footer-content">
+    <div class="contact-info">
+      <p>Contact Us <br>
+        Phone & Email<br>
+        +233 501 382 035<br>
+        +233 559 145 698<br>
+        dcs@ug.edu.gh</p>
+    </div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button" onclick="searchFunction()">Search</button>
+      <script>
+        function searchFunction() {
+          alert("Perform search operation");
+        }
+      </script>
+    </div>
+  </div>
+
+  &copy; 2023 Department of Computer Science, University of Ghana
+</footer>
+</div>
+</div>
   </div>
  
 </body>

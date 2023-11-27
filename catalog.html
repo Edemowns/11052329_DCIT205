@@ -1,0 +1,315 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Department website</title>
+  <style>
+    
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-image: #f5f5f5;
+    }
+    p{width: 90%;
+    margin: 20px;
+    }
+    h2{font-size: xx-large;
+       background-color: white;
+    color: rgb(28, 76, 138);
+    margin: 20px;
+    }
+    h1 {
+      background-color: white;
+      color: black;
+      text-align: left;
+      margin: 0;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      font-size: larger;
+      width: 90%;
+    }
+
+    h1 img {
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    h1 button,
+    h1 a {
+      background-color: white;
+      color: rgb(28, 76, 138);
+      padding: 8px 12px;
+      margin-right: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 10px;
+      text-align: right;
+     font-size:large;
+    }
+
+    h1 button:hover,
+    h1 a:hover {
+      background-color: white;
+      color: rgb(28, 76, 138);
+    
+    }
+
+    h1 button {
+      border: 1px solid rgb(28, 76, 138); 
+    }
+    
+    h3{align-items: center;}
+    .search-container {
+      margin-left: auto; 
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+
+    .search-button {
+      background-color: rgb(28, 76, 138);
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav {
+      background-color: rgb(28, 76, 138);
+      overflow: hidden;
+      display: flex; 
+      justify-content: flex-end; 
+    }
+
+    nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 6px 8px;
+  text-decoration: none;
+  position: relative; 
+}
+
+
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+    .ribbon {
+      position: relative;
+      background-color:rgb(28, 76, 138) ;
+      color: white;
+      text-align: center;
+      padding: 5px;
+    }
+    .ribbon:before,
+    .ribbon:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-color: transparent;
+    }
+
+    .ribbon:before {
+      border-width: 5px 10px 5px 0;
+      border-right-color: #333;
+      right: -10px;
+    }
+
+    .ribbon:after {
+      border-width: 5px 0 5px 10px;
+      border-left-color: #333;
+      left: -10px;
+    }
+    
+    div {
+      display: block;
+      margin: auto;
+    }
+    .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(28, 76, 138);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto; 
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info {
+  text-align: left;
+  margin-right: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+  align-items: right;
+}
+
+.social-icons img {
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  align-items: right;
+}
+
+.social-icons img:hover {
+  transform: scale(1.5); 
+}
+
+
+
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var footer = document.querySelector('.footer');
+  
+      function toggleFooter() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          footer.style.display = 'flex';
+        } else {
+          footer.style.display = 'none';
+        }
+      }
+  
+      
+      toggleFooter();
+  
+  
+      window.addEventListener('scroll', toggleFooter);
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="ribbon">
+    <p2>
+      <a href='home.html'>Home</a>
+      <a href='about.html'>About</a>
+      <a href='research.html'>Research</a>
+      <a href='undergraduate.html'>Undergraduate</a>
+      <a href='graduate.html'>Graduate</a>
+    </p2>
+  </nav>
+  <h1>
+    <img src="comScience_logo.png" height="80" alt="Department Of Computer Science" />
+   
+    <a href='events.html'>Events</a>
+    <a href='people.html'>People</a>
+    <a href='courses.html'>Courses</a>
+    <a href='catalog.html'>Catalog</a>
+    <a href='news.html'>News</a>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button" onclick="searchFunction()">Search</button>
+      <script>
+        function searchFunction() {
+        
+          alert("Perform search operation");
+        }
+      </script>
+    </div>
+  
+    </h1>
+    <h2>Entry Requirements - Ghana WASSCE/SSSCE</h2>
+    <h1>UNDERGRADUATE ADMISSIONS FOR THE 2023/2024 ACADEMIC YEAR</h1>
+  <p> The University of Ghana announces for the information of the general public that applications are open for the admission 
+    of prospective applicants into various undergraduate programmes for the 2023/2024 academic year. Applicants should take note
+     of the following:
+     <br> <br>
+     An applicant for admission to a degree programme in our department at the University of Ghana must have at least 
+     credits (A1 - C6 in WASSCE and A – D in SSSCE) in English, Core Mathematics and Integrated Science
+      (for Science related programmes) or Social Studies (for non-Science related programmes) and three
+       elective subjects in Science for applicants applying to Science or Agriculture related disciplines or 
+       three elective subjects in General Arts/Business for applicants applying to non-Science related disciplines, 
+       with the total aggregate not exceeding 24. In addition, Science applicants should have at least a grade C6 in
+        WASSCE/D in SSSCE in Social Studies/Life Skills and non-Science applicants should also have at least a grade C6 
+        in WASSCE/D IN SSSCE in Integrated Science/Core Science.
+      </p>
+
+   <h1>   Bachelor of Science in Mathematical Sciences</h1>
+<p>Mathematics, Statistics, Actuarial Science, Computer Science, Biomathematics
+  <br>
+ 
+<h1>Entry requirements:  </h1>
+
+Core:Credit passes in English, Core Mathematics, Integrated Science & Social Studies<br>
+Electives: Credit passes in Elective Mathematics and any two subjects with at least a B3 in Elective Mathematics and Core Mathematics
+</p>
+
+<h3><img src="stepin.jpg" height="600" width="80%" alt= first step></h3>
+<p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ <p> <br></p>
+ 
+ <footer class="footer">
+  <div class="social-icons">
+    <a href="#" target="_blank"><img src="fbook.jpg" alt="Facebook"></a>
+    <a href="#" target="_blank"><img src="instagram.jpg" alt="Instagram"></a>
+  </div>
+
+  <div class="footer-content">
+    <div class="contact-info">
+      <p>Contact Us <br>
+        Phone & Email<br>
+        +233 501 382 035<br>
+        +233 559 145 698<br>
+        dcs@ug.edu.gh</p>
+    </div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button" onclick="searchFunction()">Search</button>
+      <script>
+        function searchFunction() {
+          alert("Perform search operation");
+        }
+      </script>
+    </div>
+  </div>
+
+  &copy; 2023 Department of Computer Science, University of Ghana
+</footer>
+</div>
+</div>
+</body>
+</html>
+
