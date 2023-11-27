@@ -58,7 +58,7 @@ This project is licensed under the [UG License](LICENSE).
 
 
 ### Homepage
-![Homepage](Screenshots/hhomepage.png)
+![Homepage](Screenshots/homepage.png)
 
 ### About
 ![About us](Screenshots/aboutus.png)
