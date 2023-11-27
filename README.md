@@ -58,33 +58,33 @@ This project is licensed under the [UG License](LICENSE).
 
 
 ### Homepage
-![Homepage](screenshots/hhomepage.png)
+![Homepage](Screenshots/hhomepage.png)
 
 ### About
-![About us](screenshots/aboutus.png)
+![About us](Screenshots/aboutus.png)
 
 ### Research
-![Research](screenshots/research.png)
+![Research](Screenshots/research.png)
 
 ### Undergraduate
-![Undergraduate](screenshots/undergraduate.png)
+![Undergraduate](Screenshots/undergraduate.png)
 
 ### Graduate
-![Graduate](screenshots/graduate.png)
+![Graduate](Screenshots/graduate.png)
 
 ### Events
-![Events](screenshots/events.png)
+![Events](Screenshots/events.png)
 
 ### People
-![Our People](screenshots/people.png)
+![Our People](Screenshots/people.png)
 
 ### Courses
-![Courses offered](screenshots/courses.png)
+![Courses offered](Screenshots/courses.png)
 
 ### catalog
-![Catalog](screenshots/catalog.png)
+![Catalog](Screenshots/catalog.png)
 ### News
-![news](screenshots/news.png)
+![news](Screenshots/news.png)
 
 
 
