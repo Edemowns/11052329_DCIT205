@@ -3,15 +3,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <title> Department website</title>
   <style>
+        .slider-container {
+      max-width: 80%;
+      margin: 20px auto;
+    }
+
     
     body {
-      font-family: 'Times New Roman', Times, serif;
-      margin: 0;
-      padding: 0;
-      background-image: #f5f5f5;
+
+  margin: 0;
+  padding: 0;
+  background-color:  #e6f7ff;
+
+    }
+    h2 {
+      
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      
+
+  color: rgb(28, 76, 138);
+  text-decoration: underline;
+  margin: 20px 30px;
+  padding: 15px;
+  text-align: left;
+}
+p {
+      font-family: 'Verdana', sans-serif;
     }
     h1 {
       background-color: white;
@@ -51,19 +75,36 @@
     h1 button {
       border: 1px solid rgb(28, 76, 138); 
     }
-    h2{background-color: white;
-       color: rgb(28, 76, 138);
-       text-decoration: underline;
-       margin-left: 30px;
-       margin-right: 30px;
-       text-align: left;
+    .cta-container {
+      text-align: center;}
+    .cta-button {
+      align-items: center;
+      justify-content: center;
+      background-color: #004080;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: large;
+      text-decoration: none;
     }
-    p{text-decoration: wavy;
-      text-decoration: dotted;
-    text-align: left;
-  width: 80%;
-     margin-left:20px ;
+    .cta-button:hover {
+      align-items: center;
+      justify-content: center;
+      background-color: #00254d;
+    }
+
+    p {
+  text-align: left;
+  width: 90%;
+  margin: 20px auto;
+  line-height: 1.6;
 }
+p img:hover {
+  transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;}
+
     .search-container {
       margin-left: auto; 
       display: flex;
@@ -100,6 +141,7 @@
   padding: 6px 8px;
   text-decoration: none;
   position: relative; 
+  font-weight: bold;
 }
 
 
@@ -144,8 +186,7 @@ nav a:hover {
       margin: auto;
     }
     .footer {
-      display: none;
-  background-color: rgb(28, 76, 138);
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 20px;
@@ -153,16 +194,19 @@ nav a:hover {
   bottom: 0;
   width: 100%;
   height: 5%;
-  display: contents;
-    }
-    .social-icons a {
-  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
   display: inline-block;
   align-items: right;
 }
 
 .social-icons img {
-  width: 30px; 
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
@@ -170,12 +214,33 @@ nav a:hover {
 }
 
 .social-icons img:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5);
 }
+.slider {
+      width: 100%;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100;
+      object-fit: cover;
+    }
+
+    div {
+      display: block;
+      margin: auto;
+    }
+
 
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    function exploreMore() {
+   
+      alert("Explore more functionality");
+    }
+  </script>
   <script>
     $(document).ready(function () {
       $('.slider').slick({
@@ -227,12 +292,25 @@ nav a:hover {
     </div>
   
     </h1>
+
+    <div class="slider-container">
+<!-- Add your slider or other visual elements here -->
+<div class="slider">
+      
+  <div><img src="download.jpg" width="100%" alt="Slide 1" /></div>
+  <div><img src="code-computer.png"  width="100%"  alt="Slide 2" /></div>
+  <div><img src="alta-epecializacion.jpg"  width="100%"  alt="Slide 3" /></div>
+
+  <div><img src="people.jpeg"  width="100%"  alt="Slide 3" /></div>
+</div>
+      </div>
     <h2>CS RESEARCH</h2>
     <p>A defining characteristic of the University of Ghana is a common commitment for research and education, which is best 
       demonstrated by the undergraduate and graduate computer science programmes. Together with cutting-edge scholarship, research
        engineers, and students conduct important studies for the government and business.</p>
       <p> <img src="RES.webp" height="500" width="90%" alt="research img"> </p>
-      <p>Our undergraduate and graduate curricula are continuously improved to meet real-world demands and today's rapid 
+      <p style="font-family: 'Courier New', monospace; color: #004080;"></p>
+      Our undergraduate and graduate curricula are continuously improved to meet real-world demands and today's rapid 
         technological changes with the aim of equipping students with the skills required for addressing the challenges of
          the 21st century. An interdisciplinary approach to teaching and research is prevalent throughout the department to 
          enhance the exchange of ideas. The Computer Science Department offers an accredited undergraduate degree in computer 
@@ -243,6 +321,16 @@ nav a:hover {
             of the faculty of computer science, to investigate and discover more about the outstanding chances found in our research 
             and teaching initiatives. Please do not hesitate to contact us if you have any questions or comments.</p>
              
+            <div class="cta-container">
+              <button class="cta-button" onclick="exploreMore()">Explore More</button>
+            </div>
+            <p> <br></p>
+            <p> <br></p>
+            <p> <br></p>
+            <p> <br></p>
+            <p> <br></p>
+            <p> <br></p>
+            
  <footer class="footer">
   &copy; 2023 Department of Computer Science, University of Ghana
   <div class="social-icons">
